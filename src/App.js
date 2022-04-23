@@ -1,7 +1,8 @@
-import ExpenseItem from "./components/ExpenseItem";
+import React from 'react';
+import Expenses from './components/Expenses/Expenses';
 
-function App() {
-  let Expenses = [
+const App = () => {
+  let expenses = [
     {
       title: "Some Books",
       amount: 200.00,
@@ -24,29 +25,17 @@ function App() {
     },
   ];
 
+  // return ( 
+  //   React.createElement(
+  //     'div',
+  //     {},
+  //     React.createElement(Expenses, {items:expenses})
+  //   )
+  // );
+
   return (
     <div>
-      <h1>Hello World !!</h1>
-      <ExpenseItem
-        title={Expenses[0].title}
-        amount={Expenses[0].amount}
-        date={Expenses[0].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={Expenses[1].title}
-        amount={Expenses[1].amount}
-        date={Expenses[1].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={Expenses[2].title}
-        amount={Expenses[2].amount}
-        date={Expenses[2].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={Expenses[3].title}
-        amount={Expenses[3].amount}
-        date={Expenses[3].date}
-      ></ExpenseItem>
+      <Expenses items = {expenses}/>
     </div>
   );
 }
