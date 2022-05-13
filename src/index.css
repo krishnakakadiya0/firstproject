@@ -9,3 +9,6 @@ body{
   background-color: rgb(228, 191, 255);
   font-family: 'Noto Sans JP', sans-serif;
 }
+li{
+  list-style: none;
+}
